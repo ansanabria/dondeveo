@@ -19,7 +19,7 @@ export const SearchItem = ({ item, baseUrl, posterSize }: SearchItemProps) => {
     date = new Date(fullItem.first_air_date)
   }
   return (
-    <div className="flex items-center gap-x-10 rounded-xl bg-gray-700 p-6">
+    <div className="flex items-center space-x-10 rounded-xl bg-gray-700 p-6">
       <div className="relative aspect-[94/141] w-1/6 overflow-hidden rounded-md bg-gray-300">
         {!item.poster_path ? (
           <div className="h-full w-full bg-gray-200">
@@ -35,7 +35,7 @@ export const SearchItem = ({ item, baseUrl, posterSize }: SearchItemProps) => {
         )}
       </div>
       <div className="w-5/6">
-        <div className="mb-1 flex items-center gap-x-5">
+        <div className="mb-1 flex items-center space-x-5">
           <h2 className="text-xl font-bold">{heading}</h2>
           <div
             className={`w-full max-w-max rounded-md p-1 text-xs font-black ${
@@ -51,7 +51,7 @@ export const SearchItem = ({ item, baseUrl, posterSize }: SearchItemProps) => {
           </div>
         )}
         <p className="mt-3 line-clamp-3">{item.overview}</p>
-        <div className="mt-3 flex flex-wrap gap-x-3 font-bold ">
+        <div className="mt-3 flex flex-wrap space-x-3 font-bold ">
           {item.providers.map((prov) => {
             return (
               <div
