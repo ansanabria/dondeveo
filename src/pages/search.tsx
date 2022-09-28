@@ -6,22 +6,35 @@ import {
   getStreamingServices,
 } from "@/utils"
 import { GetServerSideProps } from "next"
+import { BiSad as SadIcon } from "react-icons/bi"
 import { v4 as uuidv4 } from "uuid"
 
 const Search = ({ filteredData, baseUrl, posterSize }: SearchProps) => {
   return (
-    <div className="mx-auto my-10 flex max-w-3xl flex-col space-y-10">
+    <div className="mx-auto mt-10 flex max-w-3xl flex-col space-y-10 px-4">
       <SearchBar className="mx-auto max-w-xl" />
       <div className="flex flex-col space-y-5">
-        {filteredData.map((item) => (
-          <SearchItem
-            key={uuidv4()}
-            item={item}
-            baseUrl={baseUrl}
-            posterSize={posterSize}
-          />
-        ))}
+        {filteredData.length ? (
+          filteredData.map((item) => (
+            <SearchItem
+              key={uuidv4()}
+              item={item}
+              baseUrl={baseUrl}
+              posterSize={posterSize}
+            />
+          ))
+        ) : (
+          <div className="flex flex-col items-center space-y-4">
+            <SadIcon size={50} />
+            <p className="text-lg">
+              We are sorry, we did not find what you are looking for.
+            </p>
+          </div>
+        )}
       </div>
+      <footer className="text-light border-t border-t-white/20 py-5 text-center text-xs font-light">
+        Powered by JustWatch
+      </footer>
     </div>
   )
 }

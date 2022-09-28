@@ -85,12 +85,17 @@ export const getStreamingServices = async (
     })
   )
 
-  const filteredData = dataWithStreaming.filter((item) => {
-    const providerLength = item.providers.length
-    if (providerLength) {
-      return true
+  const filteredData = dataWithStreaming.map((item) => {
+    if (item.providers.length) {
+      const filteredProviders = item.providers.filter((prov) => {
+        if (prov.provider_name === "HBO Go") {
+          return false
+        }
+        return true
+      })
+      return { ...item, providers: filteredProviders }
     }
-    return false
+    return item
   })
 
   return filteredData

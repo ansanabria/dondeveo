@@ -19,9 +19,9 @@ export const SearchBar = ({ className }: StylingProps) => {
 
   return (
     <form className={`flex w-full gap-x-4 ${className}`} onSubmit={onSubmit}>
-      <div className="flex h-12 grow items-center overflow-hidden rounded-xl bg-gray-700 hover:drop-shadow-2xl">
+      <div className="flex h-12 w-full grow items-center overflow-hidden rounded-xl bg-gray-700 hover:drop-shadow-2xl">
         <input
-          className="h-full grow bg-inherit px-4 outline-none"
+          className="h-full w-full grow bg-inherit px-4 text-sm outline-none"
           placeholder="Search your movie or TV show..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
