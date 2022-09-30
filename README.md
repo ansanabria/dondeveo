@@ -4,7 +4,7 @@
 
 - Analytics para conocer el uso.
 - Escoger nombre y dominio.
-- Cambiar los copy a español.
+- Cambiar los copy a español
 
 ### No MVP.
 
