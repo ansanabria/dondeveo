@@ -33,7 +33,7 @@ const Search = ({ filteredData, baseUrl, posterSize }: SearchProps) => {
         )}
       </div>
       <footer className="text-light flex flex-col space-y-2 border-t border-t-white/20 py-5 text-center text-xs font-light">
-        <span className="font-bold text-neutral-200">
+        <span className="font-bold">
           Hecho por{" "}
           <a
             className="bg-gradient-to-br from-rose-700 via-purple-700 to-blue-600 hover:underline"
