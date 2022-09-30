@@ -27,7 +27,7 @@ const Search = ({ filteredData, baseUrl, posterSize }: SearchProps) => {
           <div className="flex flex-col items-center space-y-4">
             <SadIcon size={50} />
             <p className="text-lg">
-              We are sorry, we did not find what you are looking for.
+              Lo sentimos, no encontramos lo que estás buscando.
             </p>
           </div>
         )}

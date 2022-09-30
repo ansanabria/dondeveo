@@ -10,8 +10,8 @@ import {
 } from "@/types"
 
 export const formatOptions: FormatOptionsType = {
-  movie: "Movie",
-  tv: "TV Show",
+  movie: "Película",
+  tv: "Serie",
 }
 
 export const isValid = (date: Date) => {

@@ -46,8 +46,11 @@ export const SearchItem = ({ item, baseUrl, posterSize }: SearchItemProps) => {
           </div>
         </div>
         {isValid(date) && (
-          <div className="mt-3 text-center text-sm font-light md:text-left">
-            {date.toDateString().slice(3)}
+          <div className="mt-3 text-center text-sm font-light capitalize md:text-left">
+            {date.toLocaleDateString("es-ES", {
+              year: "numeric",
+              month: "short",
+            })}
           </div>
         )}
         <p className="mt-3 text-sm line-clamp-3 md:text-base">
@@ -70,7 +73,7 @@ export const SearchItem = ({ item, baseUrl, posterSize }: SearchItemProps) => {
               className="w-fit rounded-md bg-rose-900 py-1 px-2"
               key={uuidv4()}
             >
-              Not available in your country
+              No disponible en tu país
             </div>
           )}
         </div>
