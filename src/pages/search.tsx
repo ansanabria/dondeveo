@@ -32,8 +32,24 @@ const Search = ({ filteredData, baseUrl, posterSize }: SearchProps) => {
           </div>
         )}
       </div>
-      <footer className="text-light border-t border-t-white/20 py-5 text-center text-xs font-light">
-        Powered by JustWatch
+      <footer className="text-light flex flex-col space-y-2 border-t border-t-white/20 py-5 text-center text-xs font-light">
+        <span className="font-bold text-neutral-200">
+          Hecho por{" "}
+          <a
+            className="bg-gradient-to-br from-rose-700 via-purple-700 to-blue-600 hover:underline"
+            href="https://www.linkedin.com/in/jandrev/"
+          >
+            Andrés
+          </a>{" "}
+          y{" "}
+          <a
+            className="bg-gradient-to-br from-rose-700 via-purple-700 to-blue-600 hover:underline"
+            href="https://www.linkedin.com/in/rfsan/"
+          >
+            Rafael
+          </a>
+        </span>
+        <span className="text-neutral-400">Powered by JustWatch</span>
       </footer>
     </div>
   )

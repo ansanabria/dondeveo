@@ -22,7 +22,7 @@ export const SearchBar = ({ className }: StylingProps) => {
       <div className="flex h-12 w-full grow items-center overflow-hidden rounded-xl bg-gray-700 hover:drop-shadow-2xl">
         <input
           className="h-full w-full grow bg-inherit px-4 text-sm outline-none"
-          placeholder="Nombre de la película o serie..."
+          placeholder="Busca tu película o serie..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
