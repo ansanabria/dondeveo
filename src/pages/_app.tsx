@@ -18,7 +18,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         async
         defer
         data-website-id="8e52dc58-bf0c-4ddf-a507-2e62ac045a9b"
-        src="https://umami-topaz-tau.vercel.app/umami.js"
+        src="https://jandrev-analytics.vercel.app/umami.js"
         strategy="beforeInteractive"
       ></Script>
       <CustomHead
